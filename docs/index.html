@@ -18,7 +18,18 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 }
 </style>
 <body>
-
+<code>
+#include<stdio.h>
+#define TOTAL_ELEMENTS (sizeof(array) / sizeof(array[0]))
+int array[] = {23,34,12,17,204,99,16};
+int main()
+{
+int d;
+for(d=-1;d <= (TOTAL_ELEMENTS-2);d++)
+printf("%d\n",array[d+1]);
+return 0;
+}
+</code>
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
@@ -136,18 +147,7 @@ function w3_close() {
   overlayBg.style.display = "none";
 }
 </script>
-<code>
-#include<stdio.h>
-#define TOTAL_ELEMENTS (sizeof(array) / sizeof(array[0]))
-int array[] = {23,34,12,17,204,99,16};
-int main()
-{
-int d;
-for(d=-1;d <= (TOTAL_ELEMENTS-2);d++)
-printf("%d\n",array[d+1]);
-return 0;
-}
-</code>
+
 </body>
 </html>
 
