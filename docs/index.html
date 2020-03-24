@@ -18,18 +18,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 }
 </style>
 <body>
-<code>
-#include<stdio.h>
-#define TOTAL_ELEMENTS (sizeof(array) / sizeof(array[0]))
-int array[] = {23,34,12,17,204,99,16};
-int main()
-{
-int d;
-for(d=-1;d <= (TOTAL_ELEMENTS-2);d++)
-printf("%d\n",array[d+1]);
-return 0;
-}
-</code>
+
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
@@ -65,8 +54,18 @@ return 0;
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Heading</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
-        dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p><code>
+#include<stdio.h>
+#define TOTAL_ELEMENTS (sizeof(array) / sizeof(array[0]))
+int array[] = {23,34,12,17,204,99,16};
+int main()
+{
+int d;
+for(d=-1;d <= (TOTAL_ELEMENTS-2);d++)
+printf("%d\n",array[d+1]);
+return 0;
+}
+</code></p>
     </div>
     <div class="w3-third w3-container">
       <p class="w3-border w3-padding-large w3-padding-32 w3-center">AD</p>
