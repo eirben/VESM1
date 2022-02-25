@@ -1,6 +1,6 @@
 # Kóði til að stjórna 9 -12V dc mótorum
 Þessi kóði stjórnar hraða DC mótors frá gildi 100 til 255 þar sem 100 engin hraði bara hátíðni hljóð
-upp í fullan hraða 255 en það er hægt að stjórna semsagt hraða og hve hratt mótor kemst í þennan hraða.
+upp í fullan hraða 255 en það er hægt að stjórna hraða og hve hratt mótor kemst í þennan hraða.
 Þetta er síðan endurtekið þar sem þessi kóði er í loop.
 ``` C
 #define pwm 3
