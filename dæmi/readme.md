@@ -2,6 +2,14 @@
 Þessi kóði stjórnar hraða DC mótors frá gildi 100 til 255 þar sem 100 engin hraði bara hátíðni hljóð
 upp í fullan hraða 255 en það er hægt að stjórna hraða og hve hratt mótor kemst í þennan hraða.
 Þetta er síðan endurtekið þar sem þessi kóði er í loop.
+**ATH! ekki hægt að láta mótor snúa í báðar áttir til þess þarf H-Brigde**
+### Efni
+1. Arduino uno
+2. 1 stk 9v rafhlaða
+3. 1 stk TIP 120 transistor
+4. 5 stk vírar
+5. 1 stk brauðbretti
+6. 1 stk öflugur DC mótor
 ``` C
 #define pwm 3
 
