@@ -11,6 +11,7 @@ upp í fullan hraða 255 en það er hægt að stjórna hraða og hve hratt mót
 5. 1 stk brauðbretti
 6. 1 stk öflugur DC mótor
 ``` C
+//aðeins notaðir PWM pinnar til að stjórna DC mótorum þ.e pinnar 11,10,9,6,5 0g 3
 #define pwm 3
 
 void setup() {
