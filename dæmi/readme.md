@@ -22,3 +22,5 @@ void loop() {
   }
 }
 ```
+## Mynd af tengingu
+![Mynd](https://github.com/eirben/VESM1/blob/master/d%C3%A6mi/9V_DC_motor_tip120.png)
