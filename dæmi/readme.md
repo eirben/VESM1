@@ -43,37 +43,31 @@ void loop() {
 5. 1 stk brauðbretti
 6. 1 stk öflugur DC mótor
 
-pinni 9 PWM fer í Enable, 8 Input 1 og 7 í Input 2, pinni 8 og 7 stjórna í hvora áttina mótor sníst ef 8 er HIGH og 7 LOW til hægri
-ef 8 LOW og 7 HIGH til vinstri. Plús á mótor fer í Output 2 og mínus í Output 1 eða öfugt :-). Hægt að tengja tvo DC mótora með einu H-Brigde
+pinni 9 PWM fer í Enable1&2, 8 í Input 1 og 7 í Input 2, pinni 8 og 7 stjórna í hvora áttina mótor snýst ef 8 er HIGH og 7 LOW til hægri
+ef 8 LOW og 7 HIGH til vinstri. Plús á mótor fer í Output2 og mínus í Output1 eða öfugt :-). Hægt að tengja tvo DC mótora með einu H-Brigde
+
 ``` C
 // Motor A
- 
 int enA = 9;
 int in1 = 8;
 int in2 = 7;
  
 
 void setup()
- 
 { 
   pinMode(enA, OUTPUT);
   pinMode(in1, OUTPUT);
   pinMode(in2, OUTPUT);
- 
 }
 
 void demoOne()
- 
 {
   // Turn on motor A
- 
   digitalWrite(in1, HIGH);
   digitalWrite(in2, LOW);
  
-  // Set speed to 200 out of possible range 0~255
- 
-  analogWrite(enA, 200);
- 
+  // Set speed to 200 out of possible range 0~255 
+  analogWrite(enA, 200); 
   delay(2000);
   
   digitalWrite(in1, LOW);
@@ -81,55 +75,40 @@ void demoOne()
   delay(2000);
 
   // Now change motor directions
- 
   digitalWrite(in1, LOW);
   digitalWrite(in2, HIGH);  
   analogWrite(enA, 200);
- 
   delay(2000);
  
   // Now turn off motors
- 
   digitalWrite(in1, LOW);
   digitalWrite(in2, LOW);    
   delay(2000);
- 
 }
  
 void demoTwo()
- 
 {
   // Turn on motors
- 
   digitalWrite(in1, LOW);
   digitalWrite(in2, HIGH);  
  
   // Accelerate from zero to maximum speed
  
   for (int i = 0; i < 256; i++)
- 
   {
- 
     analogWrite(enA, i);
- 
     delay(20);
- 
   } 
  
   // Decelerate from maximum speed to zero
  
   for (int i = 255; i >= 0; --i)
- 
   {
- 
     analogWrite(enA, i);
- 
     delay(20);
- 
   } 
  
   // Now turn off motors
- 
   digitalWrite(in1, LOW);
   digitalWrite(in2, LOW);  
   delay(2000);
@@ -138,15 +117,10 @@ void demoTwo()
   digitalWrite(in2, LOW);  
  
   // Accelerate from zero to maximum speed
- 
   for (int i = 0; i < 256; i++)
- 
   {
- 
     analogWrite(enA, i);
- 
     delay(20);
- 
   } 
  
   // Decelerate from maximum speed to zero
@@ -154,29 +128,21 @@ void demoTwo()
   for (int i = 255; i >= 0; --i)
  
   {
- 
     analogWrite(enA, i);
- 
     delay(20);
- 
   }
+  
   digitalWrite(in1, LOW);
   digitalWrite(in2, LOW);
   delay(2000);
-  
- 
 }
  
 void loop()
- 
 {
- 
   demoOne();
- 
   delay(1000);
  
   demoTwo();
- 
   delay(1000);
  
 }
